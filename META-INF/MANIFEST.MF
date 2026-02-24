@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Fabric-Jar-Type: sources
+Fabric-Gradle-Version: 8.11
+Fabric-Loom-Version: 1.9.436
+Fabric-Mixin-Compile-Extensions-Version: 0.6.0
+Fabric-Minecraft-Version: 1.20.1
+Fabric-Tiny-Remapper-Version: 0.10.4
+Fabric-Loader-Version: unknown
+Fabric-Mixin-Version: unknown
+Fabric-Mixin-Group: unknown
+Fabric-Mapping-Namespace: srg
+

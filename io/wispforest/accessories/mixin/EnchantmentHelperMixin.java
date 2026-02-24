@@ -1,0 +1,88 @@
+package io.wispforest.accessories.mixin;
+
+import I;
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import com.llamalad7.mixinextras.sugar.Local;
+import com.llamalad7.mixinextras.sugar.Share;
+import com.llamalad7.mixinextras.sugar.ref.LocalRef;
+import io.wispforest.accessories.AccessoriesInternals;
+import io.wispforest.accessories.api.AccessoriesCapability;
+import io.wispforest.accessories.api.slot.SlotEntryReference;
+import io.wispforest.accessories.impl.AccessoriesTags;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.*;
+import org.jetbrains.annotations.Nullable;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import java.util.*;
+import java.util.function.Predicate;
+
+@Mixin(EnchantmentHelper.class)
+public abstract class EnchantmentHelperMixin {
+
+    @WrapOperation(method = "getEnchantmentLevel(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;)I", at = @At(value = "INVOKE", target = "Ljava/util/Map;values()Ljava/util/Collection;"))
+    private static Collection<ItemStack> addAccessoriesStacks(Map instance, Operation<Collection<ItemStack>> original, @Local(argsOnly = true) Enchantment enchantment, @Local(argsOnly = true) LivingEntity entity){
+        var returnValue = new ArrayList<>(original.call(instance));
+
+        var capability = entity.accessoriesCapability();
+
+        if(capability != null) returnValue.addAll(capability.getAllEquipped().stream().map(SlotEntryReference::stack).toList());
+
+        return returnValue;
+    }
+
+    @WrapOperation(method = "getRandomItemWith(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Predicate;)Ljava/util/Map$Entry;", at = @At(value = "INVOKE", target = "Ljava/util/Map;isEmpty()Z"))
+    private static boolean wrapMapCheck(Map instance, Operation<Boolean> original, Enchantment enchantment, LivingEntity livingEntity, Predicate<ItemStack> stackCondition, @Share("slotEntries") LocalRef<List<SlotEntryReference>> slotEntries) {
+        var bl = original.call(instance);
+
+        if(enchantmentValidForRedirect(enchantment) && livingEntity.accessoriesCapability() != null){
+            var allEquippedAccessories = livingEntity.accessoriesCapability().getAllEquipped().stream()
+                    .filter(entryReference -> {
+                        var stack = entryReference.stack();
+
+                        var level = EnchantmentHelper.m_44843_(enchantment, stack);
+
+                        return level > 0 && stackCondition.test(stack);
+                    }).toList();
+
+            slotEntries.set(allEquippedAccessories);
+
+            bl = bl && allEquippedAccessories.isEmpty();
+        } else {
+            slotEntries.set(List.of());
+        }
+
+        return bl;
+    }
+
+    @Inject(method = "getRandomItemWith(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Predicate;)Ljava/util/Map$Entry;", at = @At(value = "INVOKE", target = "Ljava/util/List;isEmpty()Z", shift = At.Shift.BEFORE), cancellable = true)
+    private static void attemptRedirectToAccessories(Enchantment enchantment, LivingEntity livingEntity, Predicate<ItemStack> stackCondition, CallbackInfoReturnable<Map.@Nullable Entry<EquipmentSlot, ItemStack>> cir, @Local(ordinal = 0) List<Map.Entry<EquipmentSlot, ItemStack>> list, @Share("slotEntries") LocalRef<List<SlotEntryReference>> slotEntries) {
+        if(!enchantmentValidForRedirect(enchantment)) return;
+
+        var allEquippedAccessories = slotEntries.get();
+
+        if(allEquippedAccessories.isEmpty()) return;
+
+        var selectedRef = allEquippedAccessories.get(livingEntity.m_217043_().m_188503_(allEquippedAccessories.size()));
+
+        list.add(Map.entry(AccessoriesInternals.INTERNAL_SLOT, selectedRef.stack()));
+    }
+
+    @Unique
+    private static boolean enchantmentValidForRedirect(Enchantment enchantment) {
+        return BuiltInRegistries.f_256876_.m_7854_(enchantment)
+            .flatMap(BuiltInRegistries.f_256876_::m_203636_)
+            .map(ref -> ref.m_203656_(AccessoriesTags.VALID_FOR_REDIRECTION))
+            .orElse(false);
+    }
+}
