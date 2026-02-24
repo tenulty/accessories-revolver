@@ -1,11 +1,8 @@
 {
   "replace": false,
-  "amount": 2,
+  "amount": 3,
   "operation": "set",
   "order": 1000,
   "icon": "accessories:gui/slot/hat",
-  "validators": [
-    "accessories:tag",
-    "accessories:component"
-  ]
+  "validators": ["accessories:tag", "accessories:component"]
 }
