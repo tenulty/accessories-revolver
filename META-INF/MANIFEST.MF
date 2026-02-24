@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+MixinConfigs: accessories-common.mixins.json,accessories-neoforge.mixins
+ .json
+

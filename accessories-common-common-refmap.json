@@ -1,0 +1,256 @@
+{
+  "mappings": {
+    "io/wispforest/accessories/mixin/ApplyBonusCountMixin": {
+      "Lnet/minecraft/world/level/storage/loot/functions/ApplyBonusCount$Formula;calculateNewCount(Lnet/minecraft/util/RandomSource;II)I": "Lnet/minecraft/world/level/storage/loot/functions/ApplyBonusCount$Formula;m_213779_(Lnet/minecraft/util/RandomSource;II)I",
+      "run": "Lnet/minecraft/world/level/storage/loot/functions/ApplyBonusCount;m_7372_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/storage/loot/LootContext;)Lnet/minecraft/world/item/ItemStack;"
+    },
+    "io/wispforest/accessories/mixin/ContainerMixin": {
+      "hasAnyMatching": "Lnet/minecraft/world/Container;m_216874_(Ljava/util/function/Predicate;)Z"
+    },
+    "io/wispforest/accessories/mixin/CriteriaTriggersAccessor": {
+      "register": "m_10595_(Lnet/minecraft/advancements/CriterionTrigger;)Lnet/minecraft/advancements/CriterionTrigger;"
+    },
+    "io/wispforest/accessories/mixin/DelegatingOpsAccessor": {
+      "delegate": "f_135465_:Lcom/mojang/serialization/DynamicOps;"
+    },
+    "io/wispforest/accessories/mixin/EnchantmentHelperMixin": {
+      "getEnchantmentLevel(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;)I": "Lnet/minecraft/world/item/enchantment/EnchantmentHelper;m_44836_(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;)I",
+      "getRandomItemWith(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Predicate;)Ljava/util/Map$Entry;": "Lnet/minecraft/world/item/enchantment/EnchantmentHelper;m_44839_(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Predicate;)Ljava/util/Map$Entry;"
+    },
+    "io/wispforest/accessories/mixin/EndermanMixin": {
+      "isLookingAtMe": "Lnet/minecraft/world/entity/monster/EnderMan;m_32534_(Lnet/minecraft/world/entity/player/Player;)Z"
+    },
+    "io/wispforest/accessories/mixin/EntityMixin": {
+      "getAllSlots": "Lnet/minecraft/world/entity/Entity;m_20158_()Ljava/lang/Iterable;"
+    },
+    "io/wispforest/accessories/mixin/EquipmentSlotMixin": {
+      "<clinit>": "Lnet/minecraft/world/entity/EquipmentSlot;<clinit>()V",
+      "<init>": "<init>",
+      "Lnet/minecraft/world/entity/EquipmentSlot;$VALUES:[Lnet/minecraft/world/entity/EquipmentSlot;": "Lnet/minecraft/world/entity/EquipmentSlot;$VALUES:[Lnet/minecraft/world/entity/EquipmentSlot;"
+    },
+    "io/wispforest/accessories/mixin/EquipmentSlotTypeMixin": {
+      "<clinit>": "Lnet/minecraft/world/entity/EquipmentSlot$Type;<clinit>()V",
+      "<init>": "<init>",
+      "Lnet/minecraft/world/entity/EquipmentSlot$Type;$VALUES:[Lnet/minecraft/world/entity/EquipmentSlot$Type;": "Lnet/minecraft/world/entity/EquipmentSlot$Type;$VALUES:[Lnet/minecraft/world/entity/EquipmentSlot$Type;"
+    },
+    "io/wispforest/accessories/mixin/InventoryMixin": {
+      "Lnet/minecraft/world/item/ItemStack;isEmpty()Z": "Lnet/minecraft/world/item/ItemStack;m_41619_()Z",
+      "clearOrCountMatchingItems": "Lnet/minecraft/world/entity/player/Inventory;m_36022_(Ljava/util/function/Predicate;ILnet/minecraft/world/Container;)I",
+      "contains(Lnet/minecraft/tags/TagKey;)Z": "Lnet/minecraft/world/entity/player/Inventory;m_204075_(Lnet/minecraft/tags/TagKey;)Z",
+      "contains(Lnet/minecraft/world/item/ItemStack;)Z": "Lnet/minecraft/world/entity/player/Inventory;m_36063_(Lnet/minecraft/world/item/ItemStack;)Z"
+    },
+    "io/wispforest/accessories/mixin/LevelRendererAccessor": {
+      "entityEffect": "f_109412_:Lnet/minecraft/client/renderer/PostChain;"
+    },
+    "io/wispforest/accessories/mixin/LivingEntityAccessor": {
+      "breakItem": "m_21278_(Lnet/minecraft/world/item/ItemStack;)V"
+    },
+    "io/wispforest/accessories/mixin/LivingEntityMixin": {
+      "Lnet/minecraft/world/entity/LivingEntity;getArmorSlots()Ljava/lang/Iterable;": "Lnet/minecraft/world/entity/LivingEntity;m_6168_()Ljava/lang/Iterable;",
+      "broadcastBreakEvent(Lnet/minecraft/world/entity/EquipmentSlot;)V": "Lnet/minecraft/world/entity/LivingEntity;m_21166_(Lnet/minecraft/world/entity/EquipmentSlot;)V",
+      "getDamageAfterMagicAbsorb": "Lnet/minecraft/world/entity/LivingEntity;m_6515_(Lnet/minecraft/world/damagesource/DamageSource;F)F"
+    },
+    "io/wispforest/accessories/mixin/NbtCompoundMixin": {
+      "Lnet/minecraft/nbt/CompoundTag;contains(Ljava/lang/String;I)Z": "Lnet/minecraft/nbt/CompoundTag;m_128425_(Ljava/lang/String;I)Z",
+      "Lnet/minecraft/nbt/CompoundTag;get(Ljava/lang/String;)Lnet/minecraft/nbt/Tag;": "Lnet/minecraft/nbt/CompoundTag;m_128423_(Ljava/lang/String;)Lnet/minecraft/nbt/Tag;",
+      "getByteArray": "Lnet/minecraft/nbt/CompoundTag;m_128463_(Ljava/lang/String;)[B",
+      "getIntArray": "Lnet/minecraft/nbt/CompoundTag;m_128465_(Ljava/lang/String;)[I",
+      "getLongArray": "Lnet/minecraft/nbt/CompoundTag;m_128467_(Ljava/lang/String;)[J",
+      "hasUUID": "Lnet/minecraft/nbt/CompoundTag;m_128403_(Ljava/lang/String;)Z"
+    },
+    "io/wispforest/accessories/mixin/NbtUtilsMixin": {
+      "loadUUID": "Lnet/minecraft/nbt/NbtUtils;m_129233_(Lnet/minecraft/nbt/Tag;)Ljava/util/UUID;"
+    },
+    "io/wispforest/accessories/mixin/PiglinAiMixin": {
+      "isWearingGold": "Lnet/minecraft/world/entity/monster/piglin/PiglinAi;m_34808_(Lnet/minecraft/world/entity/LivingEntity;)Z"
+    },
+    "io/wispforest/accessories/mixin/PowderSnowBlockMixin": {
+      "canEntityWalkOnPowderSnow": "Lnet/minecraft/world/level/block/PowderSnowBlock;m_154255_(Lnet/minecraft/world/entity/Entity;)Z"
+    },
+    "io/wispforest/accessories/mixin/RegistryOpsAccessor": {
+      "lookupProvider": "f_254668_:Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;"
+    },
+    "io/wispforest/accessories/mixin/SlotAccessor": {
+      "y": "f_40221_:I"
+    },
+    "io/wispforest/accessories/mixin/client/AbstractButtonMixin": {
+      "Lnet/minecraft/client/gui/GuiGraphics;blitNineSliced(Lnet/minecraft/resources/ResourceLocation;IIIIIIIIII)V": "Lnet/minecraft/client/gui/GuiGraphics;m_280027_(Lnet/minecraft/resources/ResourceLocation;IIIIIIIIII)V",
+      "renderWidget": "Lnet/minecraft/client/gui/components/AbstractButton;m_87963_(Lnet/minecraft/client/gui/GuiGraphics;IIF)V"
+    },
+    "io/wispforest/accessories/mixin/client/AbstractContainerScreenMixin": {
+      "isHovering(Lnet/minecraft/world/inventory/Slot;DD)Z": "Lnet/minecraft/client/gui/screens/inventory/AbstractContainerScreen;m_97774_(Lnet/minecraft/world/inventory/Slot;DD)Z"
+    },
+    "io/wispforest/accessories/mixin/client/CreativeInventoryScreenMixin": {
+      "Lnet/minecraft/client/gui/screens/inventory/EffectRenderingInventoryScreen;init()V": "Lnet/minecraft/client/gui/screens/inventory/EffectRenderingInventoryScreen;m_7856_()V",
+      "Lnet/minecraft/core/NonNullList;size()I": "Lnet/minecraft/core/NonNullList;size()I",
+      "containerTick": "Lnet/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen;m_181908_()V",
+      "init": "Lnet/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen;m_7856_()V",
+      "selectTab": "Lnet/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen;m_98560_(Lnet/minecraft/world/item/CreativeModeTab;)V",
+      "slotClicked": "Lnet/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen;m_6597_(Lnet/minecraft/world/inventory/Slot;IILnet/minecraft/world/inventory/ClickType;)V"
+    },
+    "io/wispforest/accessories/mixin/client/DefaultTooltipPositionerMixin": {
+      "positionTooltip(IILorg/joml/Vector2i;II)V": "Lnet/minecraft/client/gui/screens/inventory/tooltip/DefaultTooltipPositioner;m_280500_(IILorg/joml/Vector2i;II)V"
+    },
+    "io/wispforest/accessories/mixin/client/InventoryScreenMixin": {
+      "Lnet/minecraft/client/gui/components/Button;setPosition(II)V": "Lnet/minecraft/client/gui/components/Button;m_264152_(II)V",
+      "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;addRenderableWidget(Lnet/minecraft/client/gui/components/events/GuiEventListener;)Lnet/minecraft/client/gui/components/events/GuiEventListener;": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_142416_(Lnet/minecraft/client/gui/components/events/GuiEventListener;)Lnet/minecraft/client/gui/components/events/GuiEventListener;",
+      "init": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_7856_()V",
+      "method_19891": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_289593_(Lnet/minecraft/client/gui/components/Button;)V"
+    },
+    "io/wispforest/accessories/mixin/client/ItemInHandRendererMixin": {
+      "Lnet/minecraft/client/player/LocalPlayer;isInvisible()Z": "Lnet/minecraft/client/player/LocalPlayer;m_20145_()Z",
+      "renderTwoHandedMap": "Lnet/minecraft/client/renderer/ItemInHandRenderer;m_109339_(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IFFF)V"
+    },
+    "io/wispforest/accessories/mixin/client/LoadingOverlayMixin": {
+      "<init>": "Lnet/minecraft/client/gui/screens/LoadingOverlay;<init>(Lnet/minecraft/client/Minecraft;Lnet/minecraft/server/packs/resources/ReloadInstance;Ljava/util/function/Consumer;Z)V",
+      "Lnet/minecraft/client/gui/screens/Overlay;<init>()V": "Lnet/minecraft/client/gui/screens/Overlay;<init>()V"
+    },
+    "io/wispforest/accessories/mixin/client/MinecraftMixin": {
+      "resizeDisplay": "Lnet/minecraft/client/Minecraft;m_5741_()V"
+    },
+    "io/wispforest/accessories/mixin/client/ModelPartAccessor": {
+      "children": "f_104213_:Ljava/util/Map;",
+      "cubes": "f_104212_:Ljava/util/List;"
+    },
+    "io/wispforest/accessories/mixin/client/PlayerRendererMixin": {
+      "Lnet/minecraft/client/model/geom/ModelPart;render(Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;II)V": "Lnet/minecraft/client/model/geom/ModelPart;m_104301_(Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;II)V",
+      "renderHand": "Lnet/minecraft/client/renderer/entity/player/PlayerRenderer;m_117775_(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/player/AbstractClientPlayer;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;)V",
+      "renderLeftHand": "Lnet/minecraft/client/renderer/entity/player/PlayerRenderer;m_117813_(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/player/AbstractClientPlayer;)V",
+      "renderRightHand": "Lnet/minecraft/client/renderer/entity/player/PlayerRenderer;m_117770_(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/player/AbstractClientPlayer;)V"
+    },
+    "io/wispforest/accessories/mixin/client/RenderTargetMixin": {
+      "_blitToScreen": "Lcom/mojang/blaze3d/pipeline/RenderTarget;m_83971_(IIZ)V"
+    },
+    "io/wispforest/accessories/mixin/client/ScreenAccessor": {
+      "clearFocus": "m_264131_()V"
+    }
+  },
+  "data": {
+    "searge": {
+      "io/wispforest/accessories/mixin/ApplyBonusCountMixin": {
+        "Lnet/minecraft/world/level/storage/loot/functions/ApplyBonusCount$Formula;calculateNewCount(Lnet/minecraft/util/RandomSource;II)I": "Lnet/minecraft/world/level/storage/loot/functions/ApplyBonusCount$Formula;m_213779_(Lnet/minecraft/util/RandomSource;II)I",
+        "run": "Lnet/minecraft/world/level/storage/loot/functions/ApplyBonusCount;m_7372_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/storage/loot/LootContext;)Lnet/minecraft/world/item/ItemStack;"
+      },
+      "io/wispforest/accessories/mixin/ContainerMixin": {
+        "hasAnyMatching": "Lnet/minecraft/world/Container;m_216874_(Ljava/util/function/Predicate;)Z"
+      },
+      "io/wispforest/accessories/mixin/CriteriaTriggersAccessor": {
+        "register": "m_10595_(Lnet/minecraft/advancements/CriterionTrigger;)Lnet/minecraft/advancements/CriterionTrigger;"
+      },
+      "io/wispforest/accessories/mixin/DelegatingOpsAccessor": {
+        "delegate": "f_135465_:Lcom/mojang/serialization/DynamicOps;"
+      },
+      "io/wispforest/accessories/mixin/EnchantmentHelperMixin": {
+        "getEnchantmentLevel(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;)I": "Lnet/minecraft/world/item/enchantment/EnchantmentHelper;m_44836_(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;)I",
+        "getRandomItemWith(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Predicate;)Ljava/util/Map$Entry;": "Lnet/minecraft/world/item/enchantment/EnchantmentHelper;m_44839_(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Predicate;)Ljava/util/Map$Entry;"
+      },
+      "io/wispforest/accessories/mixin/EndermanMixin": {
+        "isLookingAtMe": "Lnet/minecraft/world/entity/monster/EnderMan;m_32534_(Lnet/minecraft/world/entity/player/Player;)Z"
+      },
+      "io/wispforest/accessories/mixin/EntityMixin": {
+        "getAllSlots": "Lnet/minecraft/world/entity/Entity;m_20158_()Ljava/lang/Iterable;"
+      },
+      "io/wispforest/accessories/mixin/EquipmentSlotMixin": {
+        "<clinit>": "Lnet/minecraft/world/entity/EquipmentSlot;<clinit>()V",
+        "<init>": "<init>",
+        "Lnet/minecraft/world/entity/EquipmentSlot;$VALUES:[Lnet/minecraft/world/entity/EquipmentSlot;": "Lnet/minecraft/world/entity/EquipmentSlot;$VALUES:[Lnet/minecraft/world/entity/EquipmentSlot;"
+      },
+      "io/wispforest/accessories/mixin/EquipmentSlotTypeMixin": {
+        "<clinit>": "Lnet/minecraft/world/entity/EquipmentSlot$Type;<clinit>()V",
+        "<init>": "<init>",
+        "Lnet/minecraft/world/entity/EquipmentSlot$Type;$VALUES:[Lnet/minecraft/world/entity/EquipmentSlot$Type;": "Lnet/minecraft/world/entity/EquipmentSlot$Type;$VALUES:[Lnet/minecraft/world/entity/EquipmentSlot$Type;"
+      },
+      "io/wispforest/accessories/mixin/InventoryMixin": {
+        "Lnet/minecraft/world/item/ItemStack;isEmpty()Z": "Lnet/minecraft/world/item/ItemStack;m_41619_()Z",
+        "clearOrCountMatchingItems": "Lnet/minecraft/world/entity/player/Inventory;m_36022_(Ljava/util/function/Predicate;ILnet/minecraft/world/Container;)I",
+        "contains(Lnet/minecraft/tags/TagKey;)Z": "Lnet/minecraft/world/entity/player/Inventory;m_204075_(Lnet/minecraft/tags/TagKey;)Z",
+        "contains(Lnet/minecraft/world/item/ItemStack;)Z": "Lnet/minecraft/world/entity/player/Inventory;m_36063_(Lnet/minecraft/world/item/ItemStack;)Z"
+      },
+      "io/wispforest/accessories/mixin/LevelRendererAccessor": {
+        "entityEffect": "f_109412_:Lnet/minecraft/client/renderer/PostChain;"
+      },
+      "io/wispforest/accessories/mixin/LivingEntityAccessor": {
+        "breakItem": "m_21278_(Lnet/minecraft/world/item/ItemStack;)V"
+      },
+      "io/wispforest/accessories/mixin/LivingEntityMixin": {
+        "Lnet/minecraft/world/entity/LivingEntity;getArmorSlots()Ljava/lang/Iterable;": "Lnet/minecraft/world/entity/LivingEntity;m_6168_()Ljava/lang/Iterable;",
+        "broadcastBreakEvent(Lnet/minecraft/world/entity/EquipmentSlot;)V": "Lnet/minecraft/world/entity/LivingEntity;m_21166_(Lnet/minecraft/world/entity/EquipmentSlot;)V",
+        "getDamageAfterMagicAbsorb": "Lnet/minecraft/world/entity/LivingEntity;m_6515_(Lnet/minecraft/world/damagesource/DamageSource;F)F"
+      },
+      "io/wispforest/accessories/mixin/NbtCompoundMixin": {
+        "Lnet/minecraft/nbt/CompoundTag;contains(Ljava/lang/String;I)Z": "Lnet/minecraft/nbt/CompoundTag;m_128425_(Ljava/lang/String;I)Z",
+        "Lnet/minecraft/nbt/CompoundTag;get(Ljava/lang/String;)Lnet/minecraft/nbt/Tag;": "Lnet/minecraft/nbt/CompoundTag;m_128423_(Ljava/lang/String;)Lnet/minecraft/nbt/Tag;",
+        "getByteArray": "Lnet/minecraft/nbt/CompoundTag;m_128463_(Ljava/lang/String;)[B",
+        "getIntArray": "Lnet/minecraft/nbt/CompoundTag;m_128465_(Ljava/lang/String;)[I",
+        "getLongArray": "Lnet/minecraft/nbt/CompoundTag;m_128467_(Ljava/lang/String;)[J",
+        "hasUUID": "Lnet/minecraft/nbt/CompoundTag;m_128403_(Ljava/lang/String;)Z"
+      },
+      "io/wispforest/accessories/mixin/NbtUtilsMixin": {
+        "loadUUID": "Lnet/minecraft/nbt/NbtUtils;m_129233_(Lnet/minecraft/nbt/Tag;)Ljava/util/UUID;"
+      },
+      "io/wispforest/accessories/mixin/PiglinAiMixin": {
+        "isWearingGold": "Lnet/minecraft/world/entity/monster/piglin/PiglinAi;m_34808_(Lnet/minecraft/world/entity/LivingEntity;)Z"
+      },
+      "io/wispforest/accessories/mixin/PowderSnowBlockMixin": {
+        "canEntityWalkOnPowderSnow": "Lnet/minecraft/world/level/block/PowderSnowBlock;m_154255_(Lnet/minecraft/world/entity/Entity;)Z"
+      },
+      "io/wispforest/accessories/mixin/RegistryOpsAccessor": {
+        "lookupProvider": "f_254668_:Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;"
+      },
+      "io/wispforest/accessories/mixin/SlotAccessor": {
+        "y": "f_40221_:I"
+      },
+      "io/wispforest/accessories/mixin/client/AbstractButtonMixin": {
+        "Lnet/minecraft/client/gui/GuiGraphics;blitNineSliced(Lnet/minecraft/resources/ResourceLocation;IIIIIIIIII)V": "Lnet/minecraft/client/gui/GuiGraphics;m_280027_(Lnet/minecraft/resources/ResourceLocation;IIIIIIIIII)V",
+        "renderWidget": "Lnet/minecraft/client/gui/components/AbstractButton;m_87963_(Lnet/minecraft/client/gui/GuiGraphics;IIF)V"
+      },
+      "io/wispforest/accessories/mixin/client/AbstractContainerScreenMixin": {
+        "isHovering(Lnet/minecraft/world/inventory/Slot;DD)Z": "Lnet/minecraft/client/gui/screens/inventory/AbstractContainerScreen;m_97774_(Lnet/minecraft/world/inventory/Slot;DD)Z"
+      },
+      "io/wispforest/accessories/mixin/client/CreativeInventoryScreenMixin": {
+        "Lnet/minecraft/client/gui/screens/inventory/EffectRenderingInventoryScreen;init()V": "Lnet/minecraft/client/gui/screens/inventory/EffectRenderingInventoryScreen;m_7856_()V",
+        "Lnet/minecraft/core/NonNullList;size()I": "Lnet/minecraft/core/NonNullList;size()I",
+        "containerTick": "Lnet/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen;m_181908_()V",
+        "init": "Lnet/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen;m_7856_()V",
+        "selectTab": "Lnet/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen;m_98560_(Lnet/minecraft/world/item/CreativeModeTab;)V",
+        "slotClicked": "Lnet/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen;m_6597_(Lnet/minecraft/world/inventory/Slot;IILnet/minecraft/world/inventory/ClickType;)V"
+      },
+      "io/wispforest/accessories/mixin/client/DefaultTooltipPositionerMixin": {
+        "positionTooltip(IILorg/joml/Vector2i;II)V": "Lnet/minecraft/client/gui/screens/inventory/tooltip/DefaultTooltipPositioner;m_280500_(IILorg/joml/Vector2i;II)V"
+      },
+      "io/wispforest/accessories/mixin/client/InventoryScreenMixin": {
+        "Lnet/minecraft/client/gui/components/Button;setPosition(II)V": "Lnet/minecraft/client/gui/components/Button;m_264152_(II)V",
+        "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;addRenderableWidget(Lnet/minecraft/client/gui/components/events/GuiEventListener;)Lnet/minecraft/client/gui/components/events/GuiEventListener;": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_142416_(Lnet/minecraft/client/gui/components/events/GuiEventListener;)Lnet/minecraft/client/gui/components/events/GuiEventListener;",
+        "init": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_7856_()V",
+        "method_19891": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_289593_(Lnet/minecraft/client/gui/components/Button;)V"
+      },
+      "io/wispforest/accessories/mixin/client/ItemInHandRendererMixin": {
+        "Lnet/minecraft/client/player/LocalPlayer;isInvisible()Z": "Lnet/minecraft/client/player/LocalPlayer;m_20145_()Z",
+        "renderTwoHandedMap": "Lnet/minecraft/client/renderer/ItemInHandRenderer;m_109339_(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IFFF)V"
+      },
+      "io/wispforest/accessories/mixin/client/LoadingOverlayMixin": {
+        "<init>": "Lnet/minecraft/client/gui/screens/LoadingOverlay;<init>(Lnet/minecraft/client/Minecraft;Lnet/minecraft/server/packs/resources/ReloadInstance;Ljava/util/function/Consumer;Z)V",
+        "Lnet/minecraft/client/gui/screens/Overlay;<init>()V": "Lnet/minecraft/client/gui/screens/Overlay;<init>()V"
+      },
+      "io/wispforest/accessories/mixin/client/MinecraftMixin": {
+        "resizeDisplay": "Lnet/minecraft/client/Minecraft;m_5741_()V"
+      },
+      "io/wispforest/accessories/mixin/client/ModelPartAccessor": {
+        "children": "f_104213_:Ljava/util/Map;",
+        "cubes": "f_104212_:Ljava/util/List;"
+      },
+      "io/wispforest/accessories/mixin/client/PlayerRendererMixin": {
+        "Lnet/minecraft/client/model/geom/ModelPart;render(Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;II)V": "Lnet/minecraft/client/model/geom/ModelPart;m_104301_(Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;II)V",
+        "renderHand": "Lnet/minecraft/client/renderer/entity/player/PlayerRenderer;m_117775_(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/player/AbstractClientPlayer;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;)V",
+        "renderLeftHand": "Lnet/minecraft/client/renderer/entity/player/PlayerRenderer;m_117813_(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/player/AbstractClientPlayer;)V",
+        "renderRightHand": "Lnet/minecraft/client/renderer/entity/player/PlayerRenderer;m_117770_(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/player/AbstractClientPlayer;)V"
+      },
+      "io/wispforest/accessories/mixin/client/RenderTargetMixin": {
+        "_blitToScreen": "Lcom/mojang/blaze3d/pipeline/RenderTarget;m_83971_(IIZ)V"
+      },
+      "io/wispforest/accessories/mixin/client/ScreenAccessor": {
+        "clearFocus": "m_264131_()V"
+      }
+    }
+  }
+}

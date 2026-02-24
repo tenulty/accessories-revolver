@@ -1,0 +1,44 @@
+{
+  "required": true,
+  "package": "io.wispforest.accessories.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+    "client.AbstractButtonMixin",
+    "client.AbstractContainerScreenMixin",
+    "client.CreativeInventoryScreenMixin",
+    "client.DefaultTooltipPositionerMixin",
+    "client.GuiGraphicsAccessor",
+    "client.InventoryScreenMixin",
+    "client.LoadingOverlayMixin",
+    "client.MinecraftMixin",
+    "client.ModelPartAccessor",
+    "client.PlayerRendererMixin",
+    "client.RenderTargetMixin",
+    "client.ScreenAccessor"
+  ],
+  "mixins": [
+    "ApplyBonusCountMixin",
+    "CriteriaTriggersAccessor",
+    "DelegatingOpsAccessor",
+    "EnchantmentHelperMixin",
+    "EndermanMixin",
+    "EquipmentSlotMixin",
+    "EquipmentSlotTypeMixin",
+    "ContainerMixin",
+    "InventoryMixin",
+    "LevelRendererAccessor",
+    "LivingEntityAccessor",
+    "LivingEntityMixin",
+    "NbtCompoundMixin",
+    "NbtUtilsMixin",
+    "PiglinAiMixin",
+    "PowderSnowBlockMixin",
+    "RegistryOpsAccessor",
+    "SlotAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "accessories-common-common-refmap.json"
+}

@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "io.wispforest.accessories.neoforge.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+    "LivingEntityRendererMixin",
+    "NeoForgeLoadingOverlayMixin"
+  ],
+  "mixins": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "accessories-neoforge-neoforge-refmap.json"
+}
