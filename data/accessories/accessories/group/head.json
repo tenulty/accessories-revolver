@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "order": 100,
-  "slots": [
-    "hat",
-    "face"
-  ],
-  "icon": "accessories:gui/group/head"
-}
